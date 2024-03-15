@@ -1219,6 +1219,7 @@ static const struct drm_display_mode edid_cea_modes[] = {
 		   3152, 3300, 0, 1080, 1084, 1089, 1250, 0,
 		   DRM_MODE_FLAG_PHSYNC | DRM_MODE_FLAG_PVSYNC),
 	  .vrefresh = 120, .picture_aspect_ratio = HDMI_PICTURE_ASPECT_64_27, },
+#if !defined(CONFIG_ARCH_MESON)
 	/* 93 - 3840x2160@24Hz 16:9 */
 	{ DRM_MODE("3840x2160", DRM_MODE_TYPE_DRIVER, 297000, 3840, 5116,
 		   5204, 5500, 0, 2160, 2168, 2178, 2250, 0,
@@ -1294,6 +1295,7 @@ static const struct drm_display_mode edid_cea_modes[] = {
 		   4104, 4400, 0, 2160, 2168, 2178, 2250, 0,
 		   DRM_MODE_FLAG_PHSYNC | DRM_MODE_FLAG_PVSYNC),
 	  .vrefresh = 60, .picture_aspect_ratio = HDMI_PICTURE_ASPECT_64_27, },
+#endif
 };
 
 /*
