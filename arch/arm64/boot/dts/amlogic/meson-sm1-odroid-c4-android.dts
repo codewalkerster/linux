@@ -116,11 +116,6 @@
 	status = "okay";
 };
 
-&sd_emmc_a {
-     /* WiFi firmware requires power to be kept while in suspend */
-    keep-power-in-suspend;
-};
-
 &spicc1 {
         status = "okay";
         pinctrl-names = "default";
